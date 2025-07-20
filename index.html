@@ -6,6 +6,63 @@
   <title>Precision Eye Treatment</title>
   <link rel="stylesheet" href="index.css" />
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+ <!-- Font Awesome (for icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+  .barman-mobile-only {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .barman-mobile-icon {
+    background-color: #661111; /* Dark maroon */
+    color: white !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+
+  .barman-mobile-icon i {
+    font-size: 22px;
+    color: white !important;
+  }
+
+  .barman-mobile-icon:hover {
+    transform: scale(1.05);
+  }
+
+  /* Optional blinking animation */
+  .blink {
+    animation: blink-animation 1.5s infinite;
+  }
+
+  @keyframes blink-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+  }
+
+  /* Hide on desktop */
+  @media (min-width: 768px) {
+    .barman-mobile-only {
+      display: none;
+    }
+  }
+</style>
+
+
+
 </head>
 <body>
 
@@ -28,17 +85,26 @@
           <a href="tel:+919876543210" class="barman-call"><i class="fas fa-phone-alt"></i><span class="barman-btn-text">+91 9876543210</span></a>
           <a href="https://wa.me/916598745620" class="barman-whatsapp"><i class="fab fa-whatsapp"></i><span class="barman-btn-text">+91 6598745620</span></a>
         </div>
-        <div class="barman-hamburger" id="barman-toggle">
+        <!-- <div class="barman-hamburger" id="barman-toggle">
           <span></span><span></span><span></span>
-        </div>
+        </div> -->
+
+
+        <!-- HTML Icons -->
+<div class="barman-mobile-only">
+  <a href="tel:+919876543210" class="barman-mobile-icon blink">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+  <a href="https://wa.me/916598745620" class="barman-mobile-icon blink">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
       </nav>
     </div>
 
 
-<div class="barman-mobile-only">
-  <a href="tel:+919876543210" class="barman-mobile-icon blink"><i class="fas custom fa-phone-alt"></i></a>
-  <a href="https://wa.me/916598745620" class="barman-mobile-icon blink"><i class="fab custom fa-whatsapp"></i></a>
-</div>
+
+
 
 
   </header>
@@ -1545,11 +1611,59 @@
    </section>
 
 
+
+    <!-- demo sec -->
+ <section class="demo-expert-section">
+  <h2 class="demo-expert-heading">Insights from the Experts</h2>
+  <p class="demo-expert-subheading">Hear directly from our eye care professionals through informative videos designed to guide and reassure you.</p>
+
+  <div class="demo-expert-carousel-wrapper">
+    <button class="demo-expert-arrow demo-expert-prev">&#8249;</button>
+
+    <div class="demo-expert-carousel-track" id="demo-expert-carousel">
+      <div class="demo-expert-card" data-video-url="https://www.youtube.com/embed/X7bYQAu8zDg?autoplay=1">
+        <div class="demo-expert-thumbnail">
+          <img src="https://img.youtube.com/vi/jCVjudmnByk/0.jpg" />
+          <button class="demo-expert-play">▶</button>
+        </div>
+        <p class="demo-expert-title">How to Protect Your Eyes Daily – Expert Advice</p>
+      </div>
+
+      <div class="demo-expert-card" data-video-url="https://www.youtube.com/embed/JMvDxaJ3Uww?autoplay=1">
+        <div class="demo-expert-thumbnail">
+          <img src="https://img.youtube.com/vi/cUmUOb7j3dc/0.jpg" />
+          <button class="demo-expert-play">▶</button>
+        </div>
+        <p class="demo-expert-title">How to Protect Your Eyes Daily – Expert Advice</p>
+      </div>
+
+      <div class="demo-expert-card" data-video-url="https://www.youtube.com/embed/ctUriXUaNUQ?autoplay=1">
+        <div class="demo-expert-thumbnail">
+          <img src="https://img.youtube.com/vi/ysz5S6PUM-U/0.jpg" />
+          <button class="demo-expert-play">▶</button>
+        </div>
+        <p class="demo-expert-title">How to Protect Your Eyes Daily – Expert Advice</p>
+      </div>
+
+      <div class="demo-expert-card" data-video-url="https://www.youtube.com/embed/r0SwnIxf-ms?autoplay=1">
+        <div class="demo-expert-thumbnail">
+          <img src="https://img.youtube.com/vi/kXYiU_JCYtU/0.jpg" />
+          <button class="demo-expert-play">▶</button>
+        </div>
+        <p class="demo-expert-title">How to Protect Your Eyes Daily – Expert Advice</p>
+      </div>
+    </div>
+
+    <button class="demo-expert-arrow demo-expert-next">&#8250;</button>
+  </div>
+</section>
+
+
   
 
     <!-- specialist -->
 
-  <section class="gettouch-section">
+  <!-- <section class="gettouch-section">
     <h2 class="gettouch-heading">See What Our Patients Say</h2>
     <p class="gettouch-subheading">Watch real stories from people who’ve regained clarity and confidence through our expert eye care.</p>
 
@@ -1557,7 +1671,7 @@
       <button class="gettouch-arrow gettouch-prev">&#8249;</button>
 
       <div class="gettouch-carousel-track" id="gettouch-carousel">
-        <!-- 4 Sample Cards -->
+
         <div class="gettouch-card" data-video-url="https://www.youtube.com/embed/cUmUOb7j3dc?si=pPLV0E4FEdHF5x1E">
           <div class="gettouch-thumbnail">
             <img src="https://img.youtube.com/vi/ysz5S6PUM-U/0.jpg" />
@@ -1594,13 +1708,13 @@
     </div>
   </section>
 
-  <!-- Modal -->
+  
   <div class="gettouch-modal" id="gettouch-modal">
     <div class="gettouch-modal-content">
       <span class="gettouch-close" id="gettouch-close">&times;</span>
       <iframe id="gettouch-video-frame" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-  </div>
+  </div> -->
 
 
   <!-- why we choose us -->
@@ -1705,72 +1819,77 @@
   </section>
 
 
+ 
+
+
 
   <!-- testinomial -->
-  <section class="testimonial-section">
-    <h2 class="testimonial-heading">Patient Stories & Experiences</h2>
-    <p class="testimonial-subheading">
-      Hear from patients who regained their vision and confidence through our expert cataract care and personalized treatment.
-    </p>
+<!-- demo testimomila -->
+ <section class="testimonial-section-container">
+    <h2 class="testimonial-section-title">Patient Stories & Experiences</h2>
+    <p class="testimonial-section-subtitle">Hear from patients who regained their vision and confidence through our expert cataract care and personalized treatment.</p>
 
-    <div class="testimonial-carousel-wrapper">
-      <button class="carousel-btn left" id="prevBtn">&#10094;</button>
-
-      <div class="testimonial-carousel" id="carousel">
-        <!-- Testimonial cards -->
-        <div class="testimonial-card">
-
-          <div class="testinomial-image">
-            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User" />
-          <h3>Pratap Kumar</h3>
+    <div class="swiper testimonial-section-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-section-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="testimonial-section-avatar" alt="avatar">
+            <h3 class="testimonial-section-name">Pratap Kumar</h3>
+            <p class="testimonial-section-rating">★★★★★</p>
+            <p class="testimonial-section-text">"The best experience ever! Friendly staff and excellent care."</p>
           </div>
-          
-          <p class="rating">5.0 <span>★★★★★</span></p>
-          <p class="text">""I was nervous about getting cataract surgery, but the team at Barman Eye Care made the entire experience smooth and reassuring. The doctors explained everything clearly, and the results were beyond my expectations. I can finally see the world clearly again!""</p>
         </div>
-
-        <div class="testimonial-card">
-
-          <div class="testinomial-image">
-          <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="User" />
-          <h3>Pratap Kumar</h3>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-section-card">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="testimonial-section-avatar" alt="avatar">
+            <h3 class="testimonial-section-name">Anjali Mehta</h3>
+            <p class="testimonial-section-rating">★★★★★</p>
+            <p class="testimonial-section-text">"They helped me regain my vision with compassion and professionalism."</p>
           </div>
-          <p class="rating">5.0 <span>★★★★★</span></p>
-          <p class="text">"The doctors explained everything clearly, and the results were beyond my expectations. I can finally see the world clearly again!"</p>
         </div>
-
-        <div class="testimonial-card">
-
-          <div class="testinomial-image">
-          <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="User" />
-          <h3>Pratap Kumar</h3>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-section-card">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" class="testimonial-section-avatar" alt="avatar">
+            <h3 class="testimonial-section-name">Rajiv Nair</h3>
+            <p class="testimonial-section-rating">★★★★★</p>
+            <p class="testimonial-section-text">"Highly skilled doctors and a very clean environment."</p>
           </div>
-          <p class="rating">5.0 <span>★★★★★</span></p>
-          <p class="text">"I can finally see the world clearly again!"</p>
         </div>
-
-        <div class="testimonial-card">
-
-          <div class="testinomial-image">
-          <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="User" />
-          <h3>Pratap Kumar</h3>
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="testimonial-section-card">
+            <img src="https://randomuser.me/api/portraits/women/62.jpg" class="testimonial-section-avatar" alt="avatar">
+            <h3 class="testimonial-section-name">Meena Sharma</h3>
+            <p class="testimonial-section-rating">★★★★★</p>
+            <p class="testimonial-section-text">"Professional team and comfortable procedure. Thank you!"</p>
           </div>
-          <p class="rating">5.0 <span>★★★★★</span></p>
-          <p class="text">"Barman Eye Care made everything smooth and reassuring. Great doctors and excellent experience!"</p>
         </div>
-
-        <div class="testimonial-card">
-
-          <div class="testinomial-image">
-          <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="User" />
-          <h3>Pratap Kumar</h3>
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="testimonial-section-card">
+            <img src="https://randomuser.me/api/portraits/men/18.jpg" class="testimonial-section-avatar" alt="avatar">
+            <h3 class="testimonial-section-name">Harsh Verma</h3>
+            <p class="testimonial-section-rating">★★★★★</p>
+            <p class="testimonial-section-text">"A seamless and smooth experience with perfect results."</p>
           </div>
-          <p class="rating">5.0 <span>★★★★★</span></p>
-          <p class="text">"Great service. Will recommend Barman Eye Care to everyone looking for clarity in vision and comfort in experience!"</p>
+        </div>
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <div class="testimonial-section-card">
+            <img src="https://randomuser.me/api/portraits/women/33.jpg" class="testimonial-section-avatar" alt="avatar">
+            <h3 class="testimonial-section-name">Priya Joshi</h3>
+            <p class="testimonial-section-rating">★★★★★</p>
+            <p class="testimonial-section-text">"Excellent service and results beyond expectations."</p>
+          </div>
         </div>
       </div>
 
-      <button class="carousel-btn right" id="nextBtn">&#10095;</button>
+      <!-- Navigation buttons -->
+      <div class="swiper-button-prev testimonial-section-nav"></div>
+      <div class="swiper-button-next testimonial-section-nav"></div>
     </div>
   </section>
 
@@ -1839,7 +1958,7 @@
     <button class="expert-arrow expert-prev">&#8249;</button>
 
     <div class="expert-carousel-track" id="expert-carousel">
-      <div class="expert-card"  data-video-url="https://www.youtube.com/embed/cUmUOb7j3dc?si=pPLV0E4FEdHF5x1E">
+      <div class="expert-card"  data-video-url="https://www.youtube.com/embed/X7bYQAu8zDg?autoplay=1">
         <div class="expert-thumbnail">
           <img src="https://img.youtube.com/vi/jCVjudmnByk/0.jpg" />
           <button class="expert-play">▶</button>
@@ -1847,7 +1966,7 @@
         <p class="expert-title">How to Protect Your Eyes Daily – Expert Advice</p>
       </div>
 
-      <div class="expert-card" data-video-url="https://www.youtube.com/embed/cUmUOb7j3dc?si=CYv29vMvIUewoC6p">
+      <div class="expert-card" data-video-url="https://youtube.com/shorts/JMvDxaJ3Uww?si=stfyhh10cXoK8RZb">
         <div class="expert-thumbnail">
           <img src="https://img.youtube.com/vi/cUmUOb7j3dc/0.jpg" />
           <button class="expert-play">▶</button>
@@ -1855,7 +1974,7 @@
         <p class="expert-title">How to Protect Your Eyes Daily – Expert Advice</p>
       </div>
 
-      <div class="expert-card" data-video-url="https://www.youtube.com/embed/ysz5S6PUM-U">
+      <div class="expert-card" data-video-url="https://youtube.com/shorts/ctUriXUaNUQ?si=HR1GB8JPJ7YkIMHI">
         <div class="expert-thumbnail">
           <img src="https://img.youtube.com/vi/ysz5S6PUM-U/0.jpg" />
           <button class="expert-play">▶</button>
@@ -1863,7 +1982,7 @@
         <p class="expert-title">How to Protect Your Eyes Daily – Expert Advice</p>
       </div>
 
-      <div class="expert-card" data-video-url="https://www.youtube.com/embed/kXYiU_JCYtU">
+      <div class="expert-card" data-video-url="https://youtube.com/shorts/r0SwnIxf-ms?si=boS3lLqkGJbMEQ5P">
         <div class="expert-thumbnail">
           <img src="https://img.youtube.com/vi/kXYiU_JCYtU/0.jpg" />
           <button class="expert-play">▶</button>
@@ -1883,6 +2002,22 @@
     <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 </div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="demo-expert-modal" id="demo-expert-modal">
+  <div class="demo-expert-modal-content">
+    <button class="demo-expert-modal-close" id="demo-expert-close">&times;</button>
+    <iframe id="demo-expert-video-frame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+
 
  
 
@@ -2090,34 +2225,84 @@
   </div>
 </div>
 
-  <script src="index.js"></script>
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
   <script>
+    const swiper = new Swiper('.testimonial-section-swiper', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        0: {
+          slidesPerView: 1,
+        }
+      }
+    });
+  </script>
+
+
+
+<script>
   const expertTrack = document.getElementById("expert-carousel");
   const expertPrev = document.querySelector(".expert-prev");
   const expertNext = document.querySelector(".expert-next");
   let expertIndex = 0;
 
   function expertUpdateCarousel() {
-    const cardWidth = expertTrack.querySelector(".expert-card").offsetWidth + 20; // gap
+    const card = expertTrack.querySelector(".expert-card");
+    const cardStyle = window.getComputedStyle(card);
+    const gap = parseInt(cardStyle.marginRight) || 20;
+    const cardWidth = card.offsetWidth + gap;
+
+    const visibleCards = window.innerWidth < 768 ? 1 : 3;
+    const maxIndex = expertTrack.children.length - visibleCards;
+
+    expertIndex = Math.max(0, Math.min(expertIndex, maxIndex));
     expertTrack.style.transform = `translateX(-${expertIndex * cardWidth}px)`;
   }
 
   expertPrev.addEventListener("click", () => {
-    if (expertIndex > 0) {
-      expertIndex--;
-      expertUpdateCarousel();
-    }
+    expertIndex--;
+    expertUpdateCarousel();
   });
 
   expertNext.addEventListener("click", () => {
-    const visibleCards = window.innerWidth < 768 ? 1 : 3;
-    if (expertIndex < expertTrack.children.length - visibleCards) {
-      expertIndex++;
-      expertUpdateCarousel();
-    }
+    expertIndex++;
+    expertUpdateCarousel();
   });
 
-  // Modal logic
+  // ✅ Convert YouTube URL to embed URL with autoplay
+  function getEmbedUrl(url) {
+    try {
+      if (url.includes("shorts/")) {
+        return "https://www.youtube.com/embed/" + url.split("shorts/")[1].split("?")[0] + "?autoplay=1";
+      } else if (url.includes("youtu.be/")) {
+        return "https://www.youtube.com/embed/" + url.split("youtu.be/")[1].split("?")[0] + "?autoplay=1";
+      } else if (url.includes("watch?v=")) {
+        return "https://www.youtube.com/embed/" + new URL(url).searchParams.get("v") + "?autoplay=1";
+      } else {
+        return url; // fallback
+      }
+    } catch {
+      return url;
+    }
+  }
+
+  // ✅ Modal logic
   const expertModal = document.getElementById("expert-modal");
   const expertIframe = expertModal.querySelector("iframe");
   const expertClose = expertModal.querySelector(".expert-modal-close");
@@ -2125,7 +2310,7 @@
   document.querySelectorAll(".expert-play").forEach((btn) => {
     btn.addEventListener("click", () => {
       const videoUrl = btn.closest(".expert-card").dataset.videoUrl;
-      expertIframe.src = `${videoUrl}&autoplay=1`;
+      expertIframe.src = getEmbedUrl(videoUrl);
       expertModal.style.display = "flex";
     });
   });
@@ -2134,7 +2319,18 @@
     expertIframe.src = "";
     expertModal.style.display = "none";
   });
+
+  // Update carousel on resize
+  window.addEventListener("resize", expertUpdateCarousel);
+
+  // Initial position
+  window.addEventListener("load", expertUpdateCarousel);
 </script>
+
+
+
+
+
 
 
 
@@ -2316,6 +2512,54 @@
   });
 </script>
 📝
+
+
+
+<!-- // demo section -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementById("demo-expert-carousel");
+  const prev = document.querySelector(".demo-expert-prev");
+  const next = document.querySelector(".demo-expert-next");
+  const modal = document.getElementById("demo-expert-modal");
+  const iframe = document.getElementById("demo-expert-video-frame");
+  const closeBtn = document.getElementById("demo-expert-close");
+
+  function updateCarousel(direction) {
+    const first = carousel.firstElementChild;
+    const last = carousel.lastElementChild;
+    if (direction === "next") {
+      carousel.appendChild(first);
+    } else {
+      carousel.insertBefore(last, first);
+    }
+  }
+
+  next.addEventListener("click", () => updateCarousel("next"));
+  prev.addEventListener("click", () => updateCarousel("prev"));
+
+  document.querySelectorAll(".demo-expert-play").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const videoUrl = btn.closest(".demo-expert-card").dataset.videoUrl;
+      iframe.src = videoUrl;
+      modal.style.display = "flex";
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    iframe.src = "";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      iframe.src = "";
+    }
+  });
+});
+</script>
+
 
 ✅
 </body>
