@@ -2009,15 +2009,16 @@ line-height: normal;
     .testimonial-section-card {
       background: #fff;
       border-radius: 12px;
-      padding: 20px;
+      padding: 40px;
       /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); */
       border: 1px solid orange;
       text-align: center;
+      height: 350px;
     }
 
     .testimonial-section-avatar {
-      width: 80px;
-      height: 80px;
+      width: 96px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 15px;
